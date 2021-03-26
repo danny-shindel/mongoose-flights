@@ -1,0 +1,160 @@
+@font-face{
+    font-family:'airport';
+    src: url("../fonts/Skyfont-NonCommercial.otf")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vmin;
+  background-color:#617073;
+  display: grid;
+  grid-template-rows: 14vmin 5vmin 1fr;
+  grid-template-areas: 
+    "h1"
+    "nav"
+    "main"
+}
+
+h1 {
+  text-align: center;
+  font-family: 'airport';
+  font-size: 12vmin;
+  color: #171A21;
+  margin: 2vmin;
+}
+
+nav {
+  background-color:#7A93AC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+nav > a {
+  transition: font-weight .2s, transform .3s, color 0.1s ease-in;
+  color:  #92BCEA;
+  text-decoration: none;
+  font-size: 2vmin;
+}
+
+nav > a:hover {
+  transform: scale(1.2);
+  transition: transform .5s, color 0.1s ease-in;
+  color: #171A21;
+}
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: scroll;
+  font-family: 'Roboto Mono', monospace;
+}
+
+table {
+  font-size: 20px;
+  margin-bottom: 2vmin;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#show-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vmin;
+  margin-bottom: 1vmin;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#show-page div:nth-child(even) {
+  margin-bottom: 2vmin;
+}
+
+#show-page div:nth-child(odd) {
+  font-weight: bold;
+  font-size: 3vmin;
+  color: rgba(0, 0, 0);
+}
+
+#add-des {
+  display: flex;
+  margin-bottom: 2vmin;
+}
+
+#details {
+  border-radius: 4px;
+  background-color:#617073;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 2vmin;
+  color: #171A21;
+}
+
+#details:hover {
+  background-color:#7A93AC;
+  color: #92BCEA;
+}
+
+#new {
+  border-radius: 4px;
+  color:  #92BCEA;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 2vmin;
+  background-color: #171A21;
+}
+
+#new:hover {
+  background-color:#7A93AC;
+  color: #92BCEA;
+}
+
+#newform {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(1, minmax(auto, 22rem));
+}
+
+#newform * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#newform input[type="submit"] {
+  grid-column: span 1;
+  width: 10rem;
+  margin-left: auto;
+}
+
+#des * {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#des {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vmin;
+}
+
+
